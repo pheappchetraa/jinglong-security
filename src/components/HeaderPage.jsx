@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
+import logo from '../assets/SJL Logo-01.png'
 
 const navLinks = [
   { to: '/', label: 'ទំព័រដើម', end: true },
@@ -16,7 +17,7 @@ const HeaderPage = () => {
     <header className="bg-white shadow-md transition-colors dark:bg-gray-900">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <NavLink to="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="JingLong Security" className="h-10 w-10 object-contain" />
+          <img src={logo} alt="JingLong Security" className="h-10 w-10 object-contain" />
           <span className="text-xl font-bold text-blue-900 dark:text-white">
             JingLong Security
           </span>
