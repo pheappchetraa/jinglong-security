@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import logo from '../assets/SJL Logo-01.png'
 
 const companyEmail = 'info@jinglongsecurity.com'
-const companyPhone = '+855 XX XXX XXX'
+const companyPhone = '+855 12 345 678'
 const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${companyEmail}`
 const telegramLink = `https://t.me/${companyPhone.replace(/[^\d+]/g, '')}`
 
