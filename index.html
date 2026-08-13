@@ -21,18 +21,20 @@
   </head>
   <body class="flex min-h-screen flex-col bg-white text-gray-900 transition-colors dark:bg-gray-950 dark:text-gray-100">
     <header class="bg-white shadow-md transition-colors dark:bg-gray-900">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="/" class="flex items-center gap-2">
-          <img src="/src/assets/SJL Logo-01.png" alt="JingLong Security" class="h-10 w-10 object-contain" />
-          <span class="text-xl font-bold text-blue-900 dark:text-white">JingLong Security</span>
+          <img src="/src/assets/SJL Logo-01.png" alt="JingLong Security" class="h-9 w-9 object-contain sm:h-10 sm:w-10" />
+          <span class="text-lg font-bold text-blue-900 dark:text-white sm:text-xl">JingLong Security</span>
         </a>
 
-        <nav class="flex items-center gap-6">
+        <nav class="hidden items-center gap-6 md:flex">
           <a href="/" data-nav-link data-nav-exact class="font-medium transition-colors text-gray-600 hover:text-blue-900 dark:text-gray-300 dark:hover:text-white">ទំព័រដើម</a>
           <a href="/services" data-nav-link class="font-medium transition-colors text-gray-600 hover:text-blue-900 dark:text-gray-300 dark:hover:text-white">សេវាកម្ម</a>
           <a href="/about" data-nav-link class="font-medium transition-colors text-gray-600 hover:text-blue-900 dark:text-gray-300 dark:hover:text-white">អំពីយើង</a>
           <a href="/contact" data-nav-link class="font-medium transition-colors text-gray-600 hover:text-blue-900 dark:text-gray-300 dark:hover:text-white">ទំនាក់ទំនង</a>
+        </nav>
 
+        <div class="flex items-center gap-2">
           <button
             type="button"
             id="theme-toggle"
@@ -54,8 +56,31 @@
               />
             </svg>
           </button>
-        </nav>
+
+          <button
+            type="button"
+            id="menu-toggle"
+            aria-label="បើកម៉ឺនុយ"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="flex h-9 w-9 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 md:hidden"
+          >
+            <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+            </svg>
+            <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      <nav id="mobile-menu" class="hidden flex-col gap-1 border-t border-gray-200 px-4 pb-3 pt-2 md:hidden dark:border-gray-800">
+        <a href="/" data-nav-link data-nav-exact class="rounded-md px-3 py-2 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-blue-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">ទំព័រដើម</a>
+        <a href="/services" data-nav-link class="rounded-md px-3 py-2 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-blue-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">សេវាកម្ម</a>
+        <a href="/about" data-nav-link class="rounded-md px-3 py-2 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-blue-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">អំពីយើង</a>
+        <a href="/contact" data-nav-link class="rounded-md px-3 py-2 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-blue-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">ទំនាក់ទំនង</a>
+      </nav>
     </header>
 
     <main class="flex-1">
@@ -91,7 +116,7 @@
     </main>
 
     <footer class="border-t border-gray-200 bg-white transition-colors dark:border-gray-800 dark:bg-gray-900">
-      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-10 md:grid-cols-3">
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8">
         <div class="flex flex-col items-center gap-3 text-center">
           <img src="/src/assets/SJL Logo-01.png" alt="JingLong Security" class="h-16 w-16 object-contain" />
           <span class="text-lg font-bold text-blue-900 dark:text-white">JingLong Security</span>
