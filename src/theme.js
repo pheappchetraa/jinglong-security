@@ -1,19 +1,19 @@
 export function initTheme() {
-  const toggleButton = document.getElementById('theme-toggle')
-  const moonIcon = document.getElementById('theme-icon-moon')
-  const sunIcon = document.getElementById('theme-icon-sun')
+  const toggleButtons = document.querySelectorAll('[data-theme-toggle]')
+  const moonIcons = document.querySelectorAll('[data-theme-icon-moon]')
+  const sunIcons = document.querySelectorAll('[data-theme-icon-sun]')
 
   const applyIcon = (theme) => {
-    moonIcon.classList.toggle('hidden', theme !== 'dark')
-    sunIcon.classList.toggle('hidden', theme === 'dark')
+    moonIcons.forEach((icon) => icon.classList.toggle('hidden', theme !== 'dark'))
+    sunIcons.forEach((icon) => icon.classList.toggle('hidden', theme === 'dark'))
   }
 
   applyIcon(document.documentElement.classList.contains('dark') ? 'dark' : 'light')
 
-  toggleButton.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.toggle('dark')
-    const theme = isDark ? 'dark' : 'light'
-    localStorage.setItem('theme', theme)
-    applyIcon(theme)
+  toggleButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark')
+      applyIcon(isDark ? 'dark' : 'light')
+    })
   })
 }

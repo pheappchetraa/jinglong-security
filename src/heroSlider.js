@@ -1,4 +1,8 @@
+let intervalId = null
+
 export function initHeroSlider() {
+  if (intervalId) clearInterval(intervalId)
+
   const section = document.getElementById('hero-slider')
   const slides = section.querySelectorAll('.hero-slide')
   const dotsContainer = document.getElementById('hero-dots')
@@ -44,7 +48,7 @@ export function initHeroSlider() {
   }
 
   function startAutoplay() {
-    setInterval(goToNext, 4000)
+    intervalId = setInterval(goToNext, 4000)
   }
 
   prevButton.addEventListener('click', goToPrev)

@@ -11,6 +11,8 @@ export function initFooter() {
   phoneLink.href = telegramLink
   phoneText.textContent = companyPhone
 
+  document.getElementById('footer-year').textContent = new Date().getFullYear()
+
   const form = document.getElementById('contact-form')
   form.addEventListener('submit', (e) => {
     e.preventDefault()
