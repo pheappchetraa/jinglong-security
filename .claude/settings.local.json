@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"vite --port 5180\")",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5180/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5180/src/components/HeaderPage.jsx)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5180/src/context/ThemeContext.jsx)",
+      "Bash(curl -s http://localhost:5181/src/App.jsx)",
+      "Bash(curl -s http://localhost:5181/ -o /tmp/index.html)",
+      "Bash(pkill -f \"vite --port 5181\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5182/src/components/HeaderPage.jsx)",
+      "Bash(curl -s http://localhost:5182/src/components/HeaderPage.jsx)"
+    ]
+  }
+}
