@@ -17,7 +17,7 @@
 <body class="bg-white text-gray-900 transition-colors dark:bg-gray-950 dark:text-gray-100">
   <div id="app" class="flex min-h-screen flex-col">
     @persist('header')
-      <livewire:header-section />
+      <livewire:components.header-section />
     @endpersist
 
     <main class="flex-1">
@@ -25,7 +25,7 @@
     </main>
 
     @persist('footer')
-      <livewire:footer-section />
+      <livewire:components.footer-section />
     @endpersist
   </div>
 

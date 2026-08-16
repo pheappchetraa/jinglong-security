@@ -60,7 +60,7 @@
         <div class="flex flex-col items-center gap-3">
           <h3 class="text-sm font-semibold uppercase tracking-wider text-green-800 dark:text-white">ផ្ញើសំណើ</h3>
           <div class="w-full">
-            <livewire:contact-form />
+            <livewire:components.contact-form />
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Livewire\ContactForm;
+use App\Livewire\Components\ContactForm;
 use App\Models\ContactSubmission;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
