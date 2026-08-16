@@ -1,5 +1,6 @@
 const TARGET_LANGUAGE = 'en'
 const WIDGET_LOAD_TIMEOUT_MS = 8000
+const LANG_STORAGE_KEY = 'lang'
 
 let widgetReady = null
 let globalListenersAttached = false
@@ -58,11 +59,31 @@ function loadTranslateWidget() {
   return widgetReady
 }
 
+function updateUI() {
+  document.querySelectorAll('[data-lang-label]').forEach((label) => {
+    label.textContent = isEnglish ? 'EN' : 'ខ្មែរ'
+  })
+  document.querySelectorAll('[data-lang-check-en]').forEach((check) => check.classList.toggle('hidden', !isEnglish))
+  document.querySelectorAll('[data-lang-check-km]').forEach((check) => check.classList.toggle('hidden', isEnglish))
+}
+
+// Shared by the dropdown click handler and the post-navigation auto-restore
+// path below, so a stored English preference is re-applied the exact same
+// way a manual click would apply it.
+async function activateEnglish() {
+  const select = await loadTranslateWidget()
+  select.value = TARGET_LANGUAGE
+  select.dispatchEvent(new Event('change'))
+  isEnglish = true
+  updateUI()
+}
+
 // Google Translate rewrites text nodes in place, which conflicts with
 // Livewire's morph-based navigation (it walks the DOM expecting the shape it
 // last rendered). Rather than fight that, we force a real full-page
 // navigation while translated — Livewire boots fresh on the next page and
-// the desync/crash never has a chance to happen.
+// the desync/crash never has a chance to happen. localStorage is what makes
+// the choice survive that reload (see restorePersistedLanguage below).
 function interceptNavigationWhileTranslated(e) {
   if (!isEnglish) return
   const destination = e.detail && e.detail.url
@@ -75,7 +96,25 @@ function interceptNavigationWhileTranslated(e) {
 // Google's translate state all come back in sync — far safer than trying to
 // manually splice the original markup back into a Livewire-managed root.
 function restoreOriginal() {
+  localStorage.setItem(LANG_STORAGE_KEY, 'km')
   window.location.reload()
+}
+
+// Runs on every real page load (including the reload triggered above) so an
+// English preference survives navigation even though the DOM itself can't be
+// carried across a full reload. Safe to call on every livewire:navigated too
+// — it's a no-op once already translated, and translated pages never reach
+// livewire:navigated anyway since interceptNavigationWhileTranslated forces
+// a hard reload before Livewire's SPA swap can run.
+export function restorePersistedLanguage() {
+  if (isEnglish) return
+  if (localStorage.getItem(LANG_STORAGE_KEY) !== 'en') return
+
+  activateEnglish().catch((err) => {
+    // eslint-disable-next-line no-console
+    console.error('Could not restore English after navigation, staying in Khmer.', err)
+    localStorage.setItem(LANG_STORAGE_KEY, 'km')
+  })
 }
 
 function setMenuOpen(wrapper, isOpen) {
@@ -108,14 +147,6 @@ export function initLangToggle() {
   )
   if (unboundWrappers.length === 0) return
 
-  const updateUI = () => {
-    document.querySelectorAll('[data-lang-label]').forEach((label) => {
-      label.textContent = isEnglish ? 'EN' : 'ខ្មែរ'
-    })
-    document.querySelectorAll('[data-lang-check-en]').forEach((check) => check.classList.toggle('hidden', !isEnglish))
-    document.querySelectorAll('[data-lang-check-km]').forEach((check) => check.classList.toggle('hidden', isEnglish))
-  }
-
   unboundWrappers.forEach((wrapper) => {
     const button = wrapper.querySelector('[data-lang-toggle]')
     button.dataset.langBound = 'true'
@@ -142,11 +173,8 @@ export function initLangToggle() {
 
         button.disabled = true
         try {
-          const select = await loadTranslateWidget()
-          select.value = TARGET_LANGUAGE
-          select.dispatchEvent(new Event('change'))
-          isEnglish = true
-          updateUI()
+          await activateEnglish()
+          localStorage.setItem(LANG_STORAGE_KEY, 'en')
         } catch (err) {
           // eslint-disable-next-line no-console
           console.error('Language switch failed, staying in Khmer.', err)

@@ -17,21 +17,62 @@
       </nav>
 
       <div class="flex items-center gap-2">
-        <button type="button" data-theme-toggle aria-label="ប្តូររបៀបងងឹត/ភ្លឺ"
-          class="hidden h-9 w-9 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 md:flex">
-          <svg data-theme-icon-moon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-            class="hidden h-5 w-5">
-            <path fill-rule="evenodd"
-              d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
-              clip-rule="evenodd" />
-          </svg>
-          <svg data-theme-icon-sun xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-            class="hidden h-5 w-5">
-            <path fill-rule="evenodd"
-              d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
-              clip-rule="evenodd" />
-          </svg>
-        </button>
+        <div class="relative hidden md:block" x-data="{ open: false }" @click.outside="open = false"
+          @keydown.escape.window="open = false">
+          <button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-haspopup="menu"
+            aria-label="ប្តូររបៀបងងឹត/ភ្លឺ"
+            class="flex h-9 w-9 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+            <svg x-cloak x-show="$store.theme.current === 'light'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              fill="currentColor" class="h-5 w-5 text-amber-400">
+              <path fill-rule="evenodd"
+                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                clip-rule="evenodd" />
+            </svg>
+            <svg x-cloak x-show="$store.theme.current === 'dark'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              fill="currentColor" class="h-5 w-5 text-purple-400">
+              <path fill-rule="evenodd"
+                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-150"
+            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95" role="menu"
+            class="absolute right-0 z-50 mt-2 w-40 origin-top-right rounded-md border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+            <button type="button" role="menuitem" @click="$store.theme.set('light'); open = false"
+              class="flex w-full items-center gap-2.5 px-3 py-2 text-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
+              :class="$store.theme.current === 'light' ? 'text-amber-500 font-semibold dark:text-amber-400' : 'text-gray-700 dark:text-gray-200'">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"
+                :class="$store.theme.current === 'light' ? 'text-amber-400' : 'text-gray-400'">
+                <path fill-rule="evenodd"
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>ភ្លឺ / Light</span>
+              <svg x-show="$store.theme.current === 'light'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" class="ml-auto h-4 w-4 text-amber-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+            </button>
+            <button type="button" role="menuitem" @click="$store.theme.set('dark'); open = false"
+              class="flex w-full items-center gap-2.5 px-3 py-2 text-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
+              :class="$store.theme.current === 'dark' ? 'text-purple-500 font-semibold dark:text-purple-400' : 'text-gray-700 dark:text-gray-200'">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"
+                :class="$store.theme.current === 'dark' ? 'text-purple-400' : 'text-gray-400'">
+                <path fill-rule="evenodd"
+                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>ងងឹត / Dark</span>
+              <svg x-show="$store.theme.current === 'dark'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" class="ml-auto h-4 w-4 text-purple-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
 
         <div class="relative" data-lang-dropdown>
           <button type="button" data-lang-toggle aria-haspopup="menu" aria-expanded="false" aria-label="ជ្រើសរើសភាសា"
@@ -101,23 +142,58 @@
             ទំនាក់ទំនង
           </a>
 
-          <button type="button" data-theme-toggle
-            class="mt-1 flex items-center justify-between rounded-md border-t border-gray-200 px-3 pb-2 pt-3 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-green-800 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">
-            <span class="flex h-5 w-5 items-center justify-center">
-              <svg data-theme-icon-moon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                class="hidden h-5 w-5">
-                <path fill-rule="evenodd"
-                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
-                  clip-rule="evenodd" />
+          <div class="mt-1 border-t border-gray-200 dark:border-gray-800" x-data="{ open: false }">
+            <button type="button" @click="open = !open" :aria-expanded="open.toString()"
+              class="flex w-full items-center justify-between rounded-md px-3 pb-2 pt-3 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-green-800 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">
+              <span class="flex items-center gap-2.5">
+                <svg x-cloak x-show="$store.theme.current === 'light'" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-amber-400">
+                  <path fill-rule="evenodd"
+                    d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                    clip-rule="evenodd" />
+                </svg>
+                <svg x-cloak x-show="$store.theme.current === 'dark'" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-purple-400">
+                  <path fill-rule="evenodd"
+                    d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span x-text="$store.theme.current === 'dark' ? 'ងងឹត / Dark' : 'ភ្លឺ / Light'"></span>
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" class="h-4 w-4 shrink-0 transition-transform" :class="open ? 'rotate-180' : ''">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
-              <svg data-theme-icon-sun xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                class="hidden h-5 w-5">
-                <path fill-rule="evenodd"
-                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
-                  clip-rule="evenodd" />
-              </svg>
-            </span>
-          </button>
+            </button>
+
+            <div class="grid overflow-hidden transition-[grid-template-rows] duration-200 ease-in-out"
+              :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+              <div class="flex min-h-0 flex-col gap-1 pb-2 pl-9 pr-3">
+                <button type="button" @click="$store.theme.set('light')"
+                  class="flex items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+                  :class="$store.theme.current === 'light' ? 'text-amber-500 font-semibold dark:text-amber-400' : 'text-gray-600 dark:text-gray-300'">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"
+                    :class="$store.theme.current === 'light' ? 'text-amber-400' : 'text-gray-400'">
+                    <path fill-rule="evenodd"
+                      d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  ភ្លឺ / Light
+                </button>
+                <button type="button" @click="$store.theme.set('dark')"
+                  class="flex items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+                  :class="$store.theme.current === 'dark' ? 'text-purple-500 font-semibold dark:text-purple-400' : 'text-gray-600 dark:text-gray-300'">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"
+                    :class="$store.theme.current === 'dark' ? 'text-purple-400' : 'text-gray-400'">
+                    <path fill-rule="evenodd"
+                      d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  ងងឹត / Dark
+                </button>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
