@@ -71,6 +71,15 @@ export function initLangToggle(mountApp) {
   const wrappers = document.querySelectorAll('[data-lang-dropdown]')
   if (wrappers.length === 0) return
 
+  // Header is persisted across wire:navigate, so its dropdown is already
+  // wired up from the initial mount — re-running here would create a fresh
+  // closure with isEnglish reset to false and stomp the real (persisted)
+  // state when updateUI() runs below. Skip entirely once bound.
+  const unboundWrappers = Array.from(wrappers).filter(
+    (wrapper) => !wrapper.querySelector('[data-lang-toggle]').dataset.langBound,
+  )
+  if (unboundWrappers.length === 0) return
+
   if (originalHtml === null) {
     originalHtml = document.getElementById('app').innerHTML
   }
@@ -85,8 +94,9 @@ export function initLangToggle(mountApp) {
     document.querySelectorAll('[data-lang-check-km]').forEach((check) => check.classList.toggle('hidden', isEnglish))
   }
 
-  wrappers.forEach((wrapper) => {
+  unboundWrappers.forEach((wrapper) => {
     const button = wrapper.querySelector('[data-lang-toggle]')
+    button.dataset.langBound = 'true'
 
     button.addEventListener('click', (e) => {
       e.stopPropagation()

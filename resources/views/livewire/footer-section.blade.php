@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 gap-10 text-center sm:grid-cols-2 lg:grid-cols-4">
         <div class="flex flex-col items-center gap-4 sm:col-span-2 lg:col-span-1">
-          <a href="/" class="flex items-center gap-2">
+          <a href="/" wire:navigate class="flex items-center gap-2">
             <img src="/images/SJL Logo-01.png" alt="JingLong Security" class="h-10 w-10 object-contain" />
             <span class="text-lg font-bold uppercase text-green-800 dark:text-white">JingLong Security</span>
           </a>
@@ -12,10 +12,10 @@
         <div class="flex flex-col items-center gap-3">
           <h3 class="text-sm font-semibold uppercase tracking-wider text-green-800 dark:text-white">តំណភ្ជាប់រហ័ស</h3>
           <ul class="flex flex-col items-center gap-2 text-sm">
-            <li><a href="/" class="text-gray-600 transition-colors hover:text-green-800 dark:text-gray-400 dark:hover:text-white">ទំព័រដើម</a></li>
-            <li><a href="/services" class="text-gray-600 transition-colors hover:text-green-800 dark:text-gray-400 dark:hover:text-white">សេវាកម្ម</a></li>
-            <li><a href="/about" class="text-gray-600 transition-colors hover:text-green-800 dark:text-gray-400 dark:hover:text-white">អំពីយើង</a></li>
-            <li><a href="/contact" class="text-gray-600 transition-colors hover:text-green-800 dark:text-gray-400 dark:hover:text-white">ទំនាក់ទំនង</a></li>
+            <li><a href="/" wire:navigate class="text-gray-600 transition-colors hover:text-green-800 dark:text-gray-400 dark:hover:text-white">ទំព័រដើម</a></li>
+            <li><a href="/services" wire:navigate class="text-gray-600 transition-colors hover:text-green-800 dark:text-gray-400 dark:hover:text-white">សេវាកម្ម</a></li>
+            <li><a href="/about" wire:navigate class="text-gray-600 transition-colors hover:text-green-800 dark:text-gray-400 dark:hover:text-white">អំពីយើង</a></li>
+            <li><a href="/contact" wire:navigate class="text-gray-600 transition-colors hover:text-green-800 dark:text-gray-400 dark:hover:text-white">ទំនាក់ទំនង</a></li>
           </ul>
         </div>
 

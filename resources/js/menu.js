@@ -1,6 +1,9 @@
 export function initMobileMenu() {
   const toggleButton = document.getElementById('menu-toggle')
   const wrapper = document.getElementById('mobile-menu-wrapper')
+  if (!toggleButton || !wrapper || toggleButton.dataset.menuBound) return
+  toggleButton.dataset.menuBound = 'true'
+
   const menu = document.getElementById('mobile-menu')
   const openIcon = document.getElementById('menu-icon-open')
   const closeIcon = document.getElementById('menu-icon-close')

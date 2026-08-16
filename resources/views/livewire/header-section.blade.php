@@ -1,18 +1,18 @@
   <header class="sticky top-0 z-50 bg-white shadow-md transition-colors dark:bg-gray-900">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-      <a href="/" class="flex items-center gap-2">
+      <a href="/" wire:navigate class="flex items-center gap-2">
         <img src="/images/SJL Logo-01.png" alt="JingLong Security" class="h-9 w-9 object-contain sm:h-10 sm:w-10" />
         <span class="text-lg font-bold uppercase text-green-800 dark:text-white sm:text-xl">JingLong Security</span>
       </a>
 
       <nav class="hidden items-center gap-6 md:flex">
-        <a href="/" data-nav-link data-nav-exact
+        <a href="/" wire:navigate data-nav-link data-nav-exact
           class="font-medium transition-colors text-gray-600 hover:text-green-800 dark:text-gray-300 dark:hover:text-white">ទំព័រដើម</a>
-        <a href="/services" data-nav-link
+        <a href="/services" wire:navigate data-nav-link
           class="font-medium transition-colors text-gray-600 hover:text-green-800 dark:text-gray-300 dark:hover:text-white">សេវាកម្ម</a>
-        <a href="/about" data-nav-link
+        <a href="/about" wire:navigate data-nav-link
           class="font-medium transition-colors text-gray-600 hover:text-green-800 dark:text-gray-300 dark:hover:text-white">អំពីយើង</a>
-        <a href="/contact" data-nav-link
+        <a href="/contact" wire:navigate data-nav-link
           class="font-medium transition-colors text-gray-600 hover:text-green-800 dark:text-gray-300 dark:hover:text-white">ទំនាក់ទំនង</a>
       </nav>
 
@@ -84,19 +84,19 @@
       class="grid grid-rows-[0fr] opacity-0 transition-[grid-template-rows,opacity] duration-300 ease-in-out md:hidden">
       <div class="overflow-hidden">
         <nav id="mobile-menu" class="flex flex-col gap-1 border-t border-gray-200 px-4 pb-3 pt-2 dark:border-gray-800">
-          <a href="/" data-nav-link data-nav-exact
+          <a href="/" wire:navigate data-nav-link data-nav-exact
             class="rounded-md px-3 py-2 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-green-800 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">
             ទំព័រដើម
           </a>
-          <a href="/services" data-nav-link
+          <a href="/services" wire:navigate data-nav-link
             class="rounded-md px-3 py-2 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-green-800 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">
             សេវាកម្ម
           </a>
-          <a href="/about" data-nav-link
+          <a href="/about" wire:navigate data-nav-link
             class="rounded-md px-3 py-2 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-green-800 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">
             អំពីយើង
           </a>
-          <a href="/contact" data-nav-link
+          <a href="/contact" wire:navigate data-nav-link
             class="rounded-md px-3 py-2 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-green-800 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">
             ទំនាក់ទំនង
           </a>

@@ -11,6 +11,9 @@ export function initTheme() {
   applyIcon(document.documentElement.classList.contains('dark') ? 'dark' : 'light')
 
   toggleButtons.forEach((button) => {
+    if (button.dataset.themeBound) return
+    button.dataset.themeBound = 'true'
+
     button.addEventListener('click', () => {
       const isDark = document.documentElement.classList.toggle('dark')
       applyIcon(isDark ? 'dark' : 'light')

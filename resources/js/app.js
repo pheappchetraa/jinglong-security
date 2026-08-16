@@ -15,3 +15,6 @@ function mountApp() {
 }
 
 mountApp()
+
+
+document.addEventListener('livewire:navigated', mountApp)

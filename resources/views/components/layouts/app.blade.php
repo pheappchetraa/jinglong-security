@@ -9,20 +9,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet" />
-  <title>@yield('title', 'JingLong Security')</title>
+  <title>{{ $title ?? 'JingLong Security' }}</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  @livewireStyles
 </head>
 
 <body class="bg-white text-gray-900 transition-colors dark:bg-gray-950 dark:text-gray-100">
   <div id="app" class="flex min-h-screen flex-col">
-    @include('partials.header')
+    @persist('header')
+      <livewire:header-section />
+    @endpersist
 
     <main class="flex-1">
-      @yield('content')
+      {{ $slot }}
     </main>
 
-    @include('partials.footer')
+    @persist('footer')
+      <livewire:footer-section />
+    @endpersist
   </div>
+
+  @livewireScripts
 </body>
 
 </html>

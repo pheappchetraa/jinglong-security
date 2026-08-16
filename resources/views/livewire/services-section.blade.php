@@ -22,7 +22,7 @@
               ការពារការិយាល័យ ហាងលក់ទំនិញ និងទីតាំងអាជីវកម្មរបស់អ្នក ជាមួយអ្នកយាមសន្តិសុខអាជីព។
               យើងជួយកាត់បន្ថយហានិភ័យលួច និងបញ្ហាសុវត្ថិភាព ដើម្បីឱ្យអាជីវកម្មរបស់អ្នកដំណើរការដោយរលូន។
             </p>
-            <a href="/services"
+            <a href="/services" wire:navigate
               class="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-green-800 transition-colors hover:text-green-600 dark:text-amber-400 dark:hover:text-white">
               ស្វែងយល់បន្ថែម
               <span aria-hidden="true">→</span>
@@ -42,7 +42,7 @@
               ធានាសុវត្ថិភាពសម្រាប់ព្រឹត្តិការណ៍គ្រប់ទំហំ ចាប់ពីជំនួបអាជីវកម្មរហូតដល់ពិធីអាពាហ៍ពិពាហ៍
               និងកម្មវិធីសាធារណៈ។ ក្រុមការងាររបស់យើងគ្រប់គ្រងហ្វូងមនុស្ស ដើម្បីឱ្យព្រឹត្តិការណ៍របស់អ្នកប្រព្រឹត្តទៅដោយរលូន។
             </p>
-            <a href="/services"
+            <a href="/services" wire:navigate
               class="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-green-800 transition-colors hover:text-green-600 dark:text-amber-400 dark:hover:text-white">
               ស្វែងយល់បន្ថែម
               <span aria-hidden="true">→</span>
@@ -62,7 +62,7 @@
               ការពារផ្ទះ និងសហគមន៍លំនៅដ្ឋានរបស់អ្នក ជាមួយការល្បាតជាទៀងទាត់ និងការឆ្លើយតបរហ័សចំពោះហេតុការណ៍ចម្លែក។
               គ្រួសាររបស់អ្នកអាចសម្រាកដោយសុខចិត្ត ដឹងថាមានអ្នកយាមសន្តិសុខជានិច្ច។
             </p>
-            <a href="/services"
+            <a href="/services" wire:navigate
               class="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-green-800 transition-colors hover:text-green-600 dark:text-amber-400 dark:hover:text-white">
               ស្វែងយល់បន្ថែម
               <span aria-hidden="true">→</span>
@@ -82,7 +82,7 @@
               សេវាកម្មការពារផ្ទាល់ខ្លួនកម្រិតខ្ពស់សម្រាប់អ្នកគ្រប់គ្រង តួសម្ដែង និងបុគ្គលសំខាន់ៗ។
               អ្នកឯកទេសរបស់យើងផ្តល់ការការពារដោយភាពប៉ិនប្រសប់ និងការគោរពឯកជនភាព។
             </p>
-            <a href="/services"
+            <a href="/services" wire:navigate
               class="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-green-800 transition-colors hover:text-green-600 dark:text-amber-400 dark:hover:text-white">
               ស្វែងយល់បន្ថែម
               <span aria-hidden="true">→</span>
@@ -103,7 +103,7 @@
               ដំឡើង តាមដាន និងថែទាំប្រព័ន្ធកាមេរ៉ាសុវត្ថិភាព ដើម្បីពង្រីកសមត្ថភាពការពាររបស់អ្នកយាមផ្ទាល់។
               ក្រុមការងាររបស់យើងតាមដានហេតុការណ៍តាមពេលវេលាជាក់ស្តែង និងជូនដំណឹងភ្លាមៗនៅពេលមានហានិភ័យ។
             </p>
-            <a href="/services"
+            <a href="/services" wire:navigate
               class="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-green-800 transition-colors hover:text-green-600 dark:text-amber-400 dark:hover:text-white">
               ស្វែងយល់បន្ថែម
               <span aria-hidden="true">→</span>
