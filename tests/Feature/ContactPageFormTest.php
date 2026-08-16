@@ -44,4 +44,22 @@ class ContactPageFormTest extends TestCase
             'service_needed' => 'commercial',
         ]);
     }
+
+    public function test_it_prefills_from_query_params(): void
+    {
+        Livewire::test(ContactPageForm::class, [
+            'initialService' => 'residential',
+            'initialMessage' => 'Pre-filled from the estimator.',
+        ])
+            ->assertSet('service_needed', 'residential')
+            ->assertSet('message', 'Pre-filled from the estimator.');
+    }
+
+    public function test_it_ignores_an_invalid_prefilled_service(): void
+    {
+        Livewire::test(ContactPageForm::class, [
+            'initialService' => 'not-a-real-option',
+        ])
+            ->assertSet('service_needed', '');
+    }
 }

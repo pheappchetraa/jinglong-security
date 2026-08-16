@@ -19,6 +19,15 @@ class ContactPageForm extends Component
 
     public bool $submitted = false;
 
+    public function mount(string $initialService = '', string $initialMessage = ''): void
+    {
+        if (array_key_exists($initialService, $this->services())) {
+            $this->service_needed = $initialService;
+        }
+
+        $this->message = $initialMessage;
+    }
+
     public function services(): array
     {
         return [

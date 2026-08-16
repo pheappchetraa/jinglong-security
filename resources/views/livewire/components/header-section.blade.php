@@ -1,4 +1,19 @@
-  <header class="sticky top-0 z-50 bg-white shadow-md transition-colors dark:bg-gray-900">
+  <div>
+    <div class="bg-green-950 text-gray-200 transition-colors dark:bg-black">
+      <div class="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-1.5 text-center text-xs sm:justify-between sm:px-6 lg:px-8">
+        <a href="tel:+855123456780" class="flex items-center gap-1.5 font-medium transition-colors hover:text-amber-400">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" class="h-3.5 w-3.5 shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          <span>ខ្សែទូរស័ព្ទបន្ទាន់៖ +855 12 345 678</span>
+        </a>
+        <span class="hidden font-semibold uppercase tracking-wide text-amber-400 sm:inline">បម្រើសេវាកម្ម ២៤/៧</span>
+      </div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white shadow-md transition-colors dark:bg-gray-900">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
       <a href="/" wire:navigate class="flex items-center gap-2">
         <img src="/images/SJL Logo-01.png" alt="JingLong Security" class="h-9 w-9 object-contain sm:h-10 sm:w-10" />
@@ -17,6 +32,11 @@
       </nav>
 
       <div class="flex items-center gap-2">
+        <a href="/contact" wire:navigate
+          class="hidden shrink-0 rounded-md bg-amber-400 px-4 py-2 text-sm font-semibold text-green-950 transition-colors hover:bg-amber-300 md:inline-block">
+          ស្នើសុំសម្រង់តម្លៃ
+        </a>
+
         <div class="relative hidden md:block" x-data="{ open: false }" @click.outside="open = false"
           @keydown.escape.window="open = false">
           <button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-haspopup="menu"
@@ -142,6 +162,11 @@
             ទំនាក់ទំនង
           </a>
 
+          <a href="/contact" wire:navigate
+            class="mt-2 rounded-md bg-amber-400 px-3 py-2.5 text-center text-sm font-semibold text-green-950 transition-colors hover:bg-amber-300">
+            ស្នើសុំសម្រង់តម្លៃ
+          </a>
+
           <div class="mt-1 border-t border-gray-200 dark:border-gray-800" x-data="{ open: false }">
             <button type="button" @click="open = !open" :aria-expanded="open.toString()"
               class="flex w-full items-center justify-between rounded-md px-3 pb-2 pt-3 font-medium transition-colors text-gray-600 hover:bg-gray-100 hover:text-green-800 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">
@@ -197,4 +222,5 @@
         </nav>
       </div>
     </div>
-  </header>
+    </header>
+  </div>

@@ -3,7 +3,7 @@
       <div class="grid grid-cols-1 gap-10 text-center sm:grid-cols-2 lg:grid-cols-4">
         <div class="flex flex-col items-center gap-4 sm:col-span-2 lg:col-span-1">
           <a href="/" wire:navigate class="flex items-center gap-2">
-            <img src="/images/SJL Logo-01.png" alt="JingLong Security" class="h-10 w-10 object-contain" />
+            <img src="/images/SJL Logo-01.png" alt="JingLong Security" loading="lazy" class="h-10 w-10 object-contain" />
             <span class="text-lg font-bold uppercase text-green-800 dark:text-white">JingLong Security</span>
           </a>
           <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">សេវាកម្មសន្តិសុខសម្រាប់សហគមន៍</p>
@@ -70,7 +70,7 @@
 
         <div class="flex flex-col items-center gap-6 border-t border-gray-200 pt-8 dark:border-gray-800">
         <div class="flex flex-col items-center gap-1.5">
-          <img src="/images/romdoullogo.png" alt="Romdoul" class="h-6 w-6 object-contain" />
+          <img src="/images/romdoullogo.png" alt="Romdoul" loading="lazy" class="h-6 w-6 object-contain" />
           <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400">Digital Design By</span>
           <span class="text-sm font-bold text-pink-900 dark:text-white">រំដួល</span>
           <span class="text-xs font-semibold uppercase tracking-wide text-pink-900 dark:text-white">Roumdoul</span>

@@ -76,7 +76,9 @@
           </div>
 
           <div class="rounded-lg border border-gray-200 bg-gray-50 p-6 transition-colors dark:border-gray-800 dark:bg-gray-900 sm:p-8">
-            <livewire:components.contact-page-form />
+            <livewire:components.contact-page-form
+              :initial-service="request()->query('service', '')"
+              :initial-message="request()->query('message', '')" />
           </div>
         </div>
       </div>
