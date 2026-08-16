@@ -18,9 +18,6 @@
                 </svg>
               </div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">អគ្គលេខាធិការដ្ឋាន</h3>
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                General Secretariat
-              </p>
               <p class="text-sm text-gray-600 dark:text-gray-400">
                 ទទួលបន្ទុកលើការគ្រប់គ្រងរដ្ឋបាលថ្នាក់ដឹកនាំ ការចរចា និងគ្រប់គ្រងកិច្ចសន្យាអតិថិជន
                 ព្រមទាំងត្រួតពិនិត្យអភិបាលកិច្ចប្រតិបត្តិការទាំងមូលរបស់ក្រុមហ៊ុន។
@@ -41,9 +38,6 @@
                 </svg>
               </div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">អគ្គនាយកដ្ឋានសន្តិសុខផ្ទៃក្នុង</h3>
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                General Directorate of Internal Security
-              </p>
               <p class="text-sm text-gray-600 dark:text-gray-400">
                 ផ្តោតលើការការពារអាជីវកម្ម ការវាយតម្លៃហានិភ័យទ្រព្យសកម្ម និងការចាត់តាំងអ្នកយាមសន្តិសុខ
                 ទៅតាមតម្រូវការជាក់លាក់របស់អតិថិជននីមួយៗ។
@@ -64,9 +58,6 @@
                 </svg>
               </div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">អគ្គនាយកដ្ឋានរដ្ឋបាល</h3>
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                General Directorate of Administration
-              </p>
               <p class="text-sm text-gray-600 dark:text-gray-400">
                 ទទួលបន្ទុកលើការគ្រប់គ្រងអាជ្ញាបណ្ណអ្នកយាមសន្តិសុខ ការអនុលោមតាមច្បាប់ ការត្រួតពិនិត្យប្រវត្តិបុគ្គលិក
                 និងការវាយតម្លៃសមត្ថភាពការងារ។
@@ -87,9 +78,6 @@
                 </svg>
               </div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">ផ្នែកប្រតិបត្តិការល្បាត</h3>
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                National Patrol &amp; Guarding Operations
-              </p>
               <p class="text-sm text-gray-600 dark:text-gray-400">
                 ទទួលបន្ទុកលើក្រុមល្បាតចល័តប្រចាំម៉ោង ២៤ លើ ៧ ថ្ងៃ ការឆ្លើយតបករណីអាសន្ន
                 និងការគ្រប់គ្រងហ្វូងមនុស្សសម្រាប់ព្រឹត្តិការណ៍។

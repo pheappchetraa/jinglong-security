@@ -2,18 +2,18 @@
 
 namespace App\Livewire\Components;
 
-use App\Models\SiteAssessmentRequest;
+use App\Models\ContactInquiry;
 use Livewire\Component;
 
-class AssessmentForm extends Component
+class ContactPageForm extends Component
 {
     public string $full_name = '';
 
     public string $phone = '';
 
-    public string $service_needed = '';
+    public string $email = '';
 
-    public string $location = '';
+    public string $service_needed = '';
 
     public string $message = '';
 
@@ -35,8 +35,8 @@ class AssessmentForm extends Component
         return [
             'full_name' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:50'],
+            'email' => ['required', 'email', 'max:255'],
             'service_needed' => ['required', 'in:'.implode(',', array_keys($this->services()))],
-            'location' => ['required', 'string', 'max:255'],
             'message' => ['nullable', 'string', 'max:2000'],
         ];
     }
@@ -45,14 +45,14 @@ class AssessmentForm extends Component
     {
         $validated = $this->validate();
 
-        SiteAssessmentRequest::create($validated);
+        ContactInquiry::create($validated);
 
-        $this->reset(['full_name', 'phone', 'service_needed', 'location', 'message']);
+        $this->reset(['full_name', 'phone', 'email', 'service_needed', 'message']);
         $this->submitted = true;
     }
 
     public function render()
     {
-        return view('livewire.components.assessment-form');
+        return view('livewire.components.contact-page-form');
     }
 }

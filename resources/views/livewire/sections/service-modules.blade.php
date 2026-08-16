@@ -2,7 +2,6 @@
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
           <h2 class="text-2xl font-bold text-green-800 dark:text-white sm:text-3xl">សេវាកម្មចម្បងៗ</h2>
-          <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Our Core Services</p>
           <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 sm:text-base">
             ព័ត៌មានលម្អិតអំពីសេវាកម្មសន្តិសុខរបស់យើងនីមួយៗ ដើម្បីជួយអ្នកជ្រើសរើសដំណោះស្រាយសមស្របបំផុតសម្រាប់ទីតាំងរបស់អ្នក។
           </p>
@@ -20,16 +19,10 @@
             </div>
             <div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">សន្តិសុខអាជីវកម្ម និងរោងចក្រ</h3>
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Commercial &amp; Industrial Security</p>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-400">
               ការពារការិយាល័យ រោងចក្រ ហាងលក់ទំនិញ និងទីតាំងសំណង់ ជាមួយអ្នកយាមសន្តិសុខអាជីព។ យើងគ្រប់គ្រងចំណុចចូល-ចេញ
               កត់ត្រាភ្ញៀវចូលមក ត្រួតពិនិត្យបរិវេណជាទៀងទាត់ និងទប់ស្កាត់ការលួចទ្រព្យសម្បត្តិ។
-            </p>
-            <p class="text-xs text-gray-500 dark:text-gray-500">
-              We protect offices, factories, retail centers, and construction sites with professional guards —
-              managing access control, visitor logs, perimeter checks, and loss prevention to keep your operations
-              running smoothly.
             </p>
             <ul class="flex flex-col gap-1.5 text-sm text-gray-600 dark:text-gray-400">
               <li class="flex items-start gap-2">
@@ -37,27 +30,26 @@
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការគ្រប់គ្រងចំណុចចូល-ចេញ / Access control &amp; ID verification</span>
+                <span>ការគ្រប់គ្រងចំណុចចូល-ចេញ និងផ្ទៀងផ្ទាត់អត្តសញ្ញាណ</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>កំណត់ត្រាភ្ញៀវចូល-ចេញជាប្រព័ន្ធ / Systematic visitor logging</span>
+                <span>កំណត់ត្រាភ្ញៀវចូល-ចេញជាប្រព័ន្ធ</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការត្រួតពិនិត្យបរិវេណ និងទប់ស្កាត់ការលួច / Perimeter checks &amp; loss prevention</span>
+                <span>ការត្រួតពិនិត្យបរិវេណ និងទប់ស្កាត់ការលួច</span>
               </li>
             </ul>
             <p class="mt-auto rounded-md bg-gray-50 px-3 py-2 text-xs text-gray-600 dark:bg-gray-900 dark:text-gray-400">
-              <span class="font-semibold text-green-800 dark:text-amber-400">Best for:</span>
-              អគារការិយាល័យ ផ្សារទំនើប ទីតាំងសំណង់ ឃ្លាំង និងធនាគារ — Office towers, retail centers, construction sites,
-              warehouses, banks
+              <span class="font-semibold text-green-800 dark:text-amber-400">សមស្របសម្រាប់៖</span>
+              អគារការិយាល័យ ផ្សារទំនើប ទីតាំងសំណង់ ឃ្លាំង និងធនាគារ
             </p>
           </div>
 
@@ -72,15 +64,10 @@
             </div>
             <div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">សន្តិសុខព្រឹត្តិការណ៍ និងការគ្រប់គ្រងហ្វូងមនុស្ស</h3>
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Event &amp; Crowd Management</p>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-400">
               ធានាសុវត្ថិភាពសម្រាប់ព្រឹត្តិការណ៍គ្រប់ទំហំ ចាប់ពីពិព័រណ៍អាជីវកម្មរហូតដល់ការប្រគុំតន្ត្រី និងពិធីអាពាហ៍ពិពាហ៍។
               ក្រុមការងាររបស់យើងគ្រប់គ្រងហ្វូងមនុស្ស ត្រួតពិនិត្យសុវត្ថិភាពមុនចូល និងអមដំណើរ VIP។
-            </p>
-            <p class="text-xs text-gray-500 dark:text-gray-500">
-              We secure events of every scale — from corporate expos to concerts and weddings. Our team manages crowd
-              flow, screens attendees at entry points, escorts VIP guests, and monitors emergency exits.
             </p>
             <ul class="flex flex-col gap-1.5 text-sm text-gray-600 dark:text-gray-400">
               <li class="flex items-start gap-2">
@@ -88,27 +75,26 @@
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ត្រួតពិនិត្យសុវត្ថិភាពមុនចូល / Entry screening</span>
+                <span>ត្រួតពិនិត្យសុវត្ថិភាពមុនចូល</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការគ្រប់គ្រងហ្វូងមនុស្ស / Crowd control</span>
+                <span>ការគ្រប់គ្រងហ្វូងមនុស្ស</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>អមដំណើរ VIP និងតាមដានច្រកចេញអាសន្ន / VIP escorting &amp; emergency exit monitoring</span>
+                <span>អមដំណើរ VIP និងតាមដានច្រកចេញអាសន្ន</span>
               </li>
             </ul>
             <p class="mt-auto rounded-md bg-gray-50 px-3 py-2 text-xs text-gray-600 dark:bg-gray-900 dark:text-gray-400">
-              <span class="font-semibold text-green-800 dark:text-amber-400">Best for:</span>
-              ពិព័រណ៍អាជីវកម្ម ការប្រគុំតន្ត្រី ព្រឹត្តិការណ៍កីឡា ពិធីអាពាហ៍ពិពាហ៍ និងជំនួបឯកជន — Corporate expos, concerts,
-              sports events, weddings, private galas
+              <span class="font-semibold text-green-800 dark:text-amber-400">សមស្របសម្រាប់៖</span>
+              ពិព័រណ៍អាជីវកម្ម ការប្រគុំតន្ត្រី ព្រឹត្តិការណ៍កីឡា ពិធីអាពាហ៍ពិពាហ៍ និងជំនួបឯកជន
             </p>
           </div>
 
@@ -123,15 +109,10 @@
             </div>
             <div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">ការល្បាតលំនៅដ្ឋាន និងបុរី</h3>
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Residential &amp; Borey Patrol</p>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-400">
               ការពារផ្ទះ និងសហគមន៍លំនៅដ្ឋានរបស់អ្នក ជាមួយសេវាកម្មយាមទ្វារ២៤ម៉ោង ការល្បាតរថយន្តតាមកាលវិភាគ
               និងការត្រួតពិនិត្យសុវត្ថិភាពសង្កាត់ជាទៀងទាត់។
-            </p>
-            <p class="text-xs text-gray-500 dark:text-gray-500">
-              We protect your home and residential community with round-the-clock gate security, scheduled vehicle
-              patrols, and routine neighborhood safety checks.
             </p>
             <ul class="flex flex-col gap-1.5 text-sm text-gray-600 dark:text-gray-400">
               <li class="flex items-start gap-2">
@@ -139,27 +120,26 @@
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>សន្តិសុខទ្វារចូល ២៤/៧ / 24/7 gate security</span>
+                <span>សន្តិសុខទ្វារចូល ២៤/៧</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការល្បាតរថយន្តតាមកាលវិភាគ / Scheduled vehicle patrols</span>
+                <span>ការល្បាតរថយន្តតាមកាលវិភាគ</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការត្រួតពិនិត្យសុវត្ថិភាពសង្កាត់ / Neighborhood safety checks</span>
+                <span>ការត្រួតពិនិត្យសុវត្ថិភាពសង្កាត់</span>
               </li>
             </ul>
             <p class="mt-auto rounded-md bg-gray-50 px-3 py-2 text-xs text-gray-600 dark:bg-gray-900 dark:text-gray-400">
-              <span class="font-semibold text-green-800 dark:text-amber-400">Best for:</span>
-              បុរីជិតខាង អាផាតមិនកម្រិតខ្ពស់ និងលំនៅដ្ឋានឯកជន — Gated communities (Boreys), luxury apartments, private
-              residences
+              <span class="font-semibold text-green-800 dark:text-amber-400">សមស្របសម្រាប់៖</span>
+              បុរីជិតខាង អាផាតមិនកម្រិតខ្ពស់ និងលំនៅដ្ឋានឯកជន
             </p>
           </div>
 
@@ -174,16 +154,10 @@
             </div>
             <div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">ការការពារ VIP និងអ្នកគ្រប់គ្រង</h3>
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Executive &amp; VIP Protection</p>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-400">
               សេវាកម្មការពារផ្ទាល់ខ្លួនកម្រិតខ្ពស់ដោយសម្ងាត់ សម្រាប់អ្នកគ្រប់គ្រង តួសម្តែង និងបុគ្គលសំខាន់ៗ។
               អ្នកឯកទេសរបស់យើងផ្តល់ការគាំទ្រការធ្វើដំណើរប្រកបដោយសុវត្ថិភាព និងវាយតម្លៃហានិភ័យជាមុន។
-            </p>
-            <p class="text-xs text-gray-500 dark:text-gray-500">
-              Discreet, high-level personal protection for executives, performers, and high-profile individuals —
-              including secure transport support and proactive risk mitigation, carried out with complete respect for
-              privacy.
             </p>
             <ul class="flex flex-col gap-1.5 text-sm text-gray-600 dark:text-gray-400">
               <li class="flex items-start gap-2">
@@ -191,27 +165,26 @@
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការការពារជិតស្និទ្ធដោយសម្ងាត់ / Discreet close protection</span>
+                <span>ការការពារជិតស្និទ្ធដោយសម្ងាត់</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការគាំទ្រការធ្វើដំណើរប្រកបដោយសុវត្ថិភាព / Secure transport support</span>
+                <span>ការគាំទ្រការធ្វើដំណើរប្រកបដោយសុវត្ថិភាព</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការវាយតម្លៃ និងកាត់បន្ថយហានិភ័យ / Risk mitigation</span>
+                <span>ការវាយតម្លៃ និងកាត់បន្ថយហានិភ័យ</span>
               </li>
             </ul>
             <p class="mt-auto rounded-md bg-gray-50 px-3 py-2 text-xs text-gray-600 dark:bg-gray-900 dark:text-gray-400">
-              <span class="font-semibold text-green-800 dark:text-amber-400">Best for:</span>
-              អ្នកគ្រប់គ្រងអាជីវកម្ម បុគ្គលមានទ្រព្យសម្បត្តិខ្ពស់ ភ្ញៀវកិត្តិយស និងតារា — Business executives,
-              high-net-worth individuals, visiting dignitaries, celebrities
+              <span class="font-semibold text-green-800 dark:text-amber-400">សមស្របសម្រាប់៖</span>
+              អ្នកគ្រប់គ្រងអាជីវកម្ម បុគ្គលមានទ្រព្យសម្បត្តិខ្ពស់ ភ្ញៀវកិត្តិយស និងតារា
             </p>
           </div>
 
@@ -227,15 +200,10 @@
             </div>
             <div>
               <h3 class="text-lg font-bold text-green-800 dark:text-white">ការគាំទ្រប្រព័ន្ធឃ្លាំមើល CCTV</h3>
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-400">CCTV &amp; Integrated Surveillance Support</p>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-400">
               ការគាំទ្រប្រព័ន្ធត្រួតពិនិត្យកណ្តាល២៤ម៉ោង ដែលភ្ជាប់ជាមួយអ្នកយាមសន្តិសុខផ្ទាល់ ដើម្បីពង្រីកសមត្ថភាពការពាររបស់អ្នក។
               ក្រុមការងាររបស់យើងតាមដានហេតុការណ៍តាមពេលវេលាជាក់ស្តែង និងជូនដំណឹងភ្លាមៗនៅពេលមានហានិភ័យ។
-            </p>
-            <p class="text-xs text-gray-500 dark:text-gray-500">
-              24/7 centralized monitoring integrated directly with our on-site guards — tracking incidents in real
-              time, issuing rapid notifications, and coordinating an immediate on-ground response.
             </p>
             <ul class="flex flex-col gap-1.5 text-sm text-gray-600 dark:text-gray-400">
               <li class="flex items-start gap-2">
@@ -243,27 +211,26 @@
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការត្រួតពិនិត្យកណ្តាល ២៤/៧ / 24/7 central monitoring</span>
+                <span>ការត្រួតពិនិត្យកណ្តាល ២៤/៧</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការជូនដំណឹងភ្លាមៗ / Rapid notification</span>
+                <span>ការជូនដំណឹងភ្លាមៗ</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" class="mt-0.5 h-4 w-4 shrink-0 text-green-800 dark:text-amber-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
-                <span>ការភ្ជាប់ជាមួយអ្នកយាមសន្តិសុខផ្ទាល់ / Integration with physical guards</span>
+                <span>ការភ្ជាប់ជាមួយអ្នកយាមសន្តិសុខផ្ទាល់</span>
               </li>
             </ul>
             <p class="mt-auto rounded-md bg-gray-50 px-3 py-2 text-xs text-gray-600 dark:bg-gray-900 dark:text-gray-400">
-              <span class="font-semibold text-green-800 dark:text-amber-400">Best for:</span>
-              អាជីវកម្មច្រើនទីតាំង ការផ្ទុកទ្រព្យសម្បត្តិមានតម្លៃខ្ពស់ និងអគារពាណិជ្ជកម្មធំៗ — Multi-location businesses,
-              high-value asset storage, commercial complexes
+              <span class="font-semibold text-green-800 dark:text-amber-400">សមស្របសម្រាប់៖</span>
+              អាជីវកម្មច្រើនទីតាំង ការផ្ទុកទ្រព្យសម្បត្តិមានតម្លៃខ្ពស់ និងអគារពាណិជ្ជកម្មធំៗ
             </p>
           </div>
         </div>

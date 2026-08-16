@@ -2,10 +2,8 @@
       <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h2 class="text-2xl font-bold text-green-800 dark:text-white sm:text-3xl">ការពារអចលនទ្រព្យ និងអាជីវកម្មរបស់អ្នកថ្ងៃនេះ</h2>
-          <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Secure Your Property Today</p>
           <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 sm:text-base">
             ទាក់ទងមកកាន់ក្រុមហ៊ុន សន្តិសុខ ជីង ឡុង ដើម្បីទទួលបានការវាយតម្លៃទីតាំងដោយឥតគិតថ្លៃ និងផែនការសន្តិសុខតាមតម្រូវការ។
-            Contact JingLong Security today for a free site assessment and a protection plan built around your needs.
           </p>
         </div>
 

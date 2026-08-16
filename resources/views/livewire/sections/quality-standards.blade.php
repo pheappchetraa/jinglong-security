@@ -2,9 +2,8 @@
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
           <h2 class="text-2xl font-bold text-white sm:text-3xl">ស្តង់ដារ និងគុណភាពនៃការបម្រើសេវា</h2>
-          <p class="text-sm font-medium text-amber-300">Standards &amp; Quality Assurance</p>
           <p class="mt-3 text-sm text-gray-200 sm:text-base">
-            ហេតុអ្វីអ្នកយាមសន្តិសុខរបស់ ជីង ឡុង មានលក្ខណៈខុសប្លែក / Why JingLong guards stand apart.
+            ហេតុអ្វីអ្នកយាមសន្តិសុខរបស់ ជីង ឡុង មានលក្ខណៈខុសប្លែក។
           </p>
         </div>
 
@@ -18,7 +17,6 @@
               </svg>
             </div>
             <h3 class="text-base font-bold text-white">ការត្រួតពិនិត្យប្រវត្តិយ៉ាងម៉ត់ចត់</h3>
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-300">Strict Background Verification</p>
             <p class="text-sm text-gray-200">
               អ្នកយាមសន្តិសុខរបស់យើងគ្រប់រូបត្រូវឆ្លងកាត់ការត្រួតពិនិត្យប្រវត្តិ និងផ្ទៀងផ្ទាត់ព្រឹត្តិការណ៍ព្រហ្មទណ្ឌយ៉ាងម៉ត់ចត់
               មុនចាត់តាំង។
@@ -34,7 +32,6 @@
               </svg>
             </div>
             <h3 class="text-base font-bold text-white">ការបណ្តុះបណ្តាលជាប្រចាំ</h3>
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-300">Continuous Training</p>
             <p class="text-sm text-gray-200">
               ការបណ្តុះបណ្តាលជាប្រចាំផ្នែកជំនួយបឋម សុវត្ថិភាពអគ្គីភ័យ និងបច្ចេកទេសកាត់បន្ថយជម្លោះ ដើម្បីរក្សាបានស្តង់ដារវិជ្ជាជីវៈខ្ពស់។
             </p>
@@ -49,7 +46,6 @@
               </svg>
             </div>
             <h3 class="text-base font-bold text-white">ការត្រួតពិនិត្យ ២៤/៧ និងវត្តមានឌីជីថល</h3>
-            <p class="text-xs font-semibold uppercase tracking-wide text-amber-300">24/7 Field Audits &amp; Digital Attendance</p>
             <p class="text-sm text-gray-200">
               អ្នកគ្រប់គ្រងស្រុកធ្វើសវនកម្មទីតាំង២៤ម៉ោង ជាមួយប្រព័ន្ធតាមដានវត្តមានជាលក្ខណៈឌីជីថល ដើម្បីធានាបាននូវការទទួលខុសត្រូវ។
             </p>
