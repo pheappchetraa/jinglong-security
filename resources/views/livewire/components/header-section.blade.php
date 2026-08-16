@@ -1,7 +1,7 @@
   <div>
     <div class="bg-green-950 text-gray-200 transition-colors dark:bg-black">
       <div class="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-1.5 text-center text-xs sm:justify-between sm:px-6 lg:px-8">
-        <a href="tel:+855123456780" class="flex items-center gap-1.5 font-medium transition-colors hover:text-amber-400">
+        <a href="tel:+855123456780" class="flex items-center gap-1.5 font-medium transition-colors hover:text-amber-400 hover:underline">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2" class="h-3.5 w-3.5 shrink-0">
             <path stroke-linecap="round" stroke-linejoin="round"

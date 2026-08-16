@@ -1,6 +1,5 @@
 <div>
     <livewire:sections.hero-section />
-    <livewire:sections.trust-bar />
     <livewire:sections.why-us-section />
     <livewire:sections.services-section />
 
