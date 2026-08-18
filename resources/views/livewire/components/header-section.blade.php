@@ -34,7 +34,7 @@
       <div class="flex items-center gap-2">
         <a href="/contact" wire:navigate
           class="hidden shrink-0 rounded-md bg-amber-400 px-4 py-2 text-sm font-semibold text-green-950 transition-colors hover:bg-amber-300 md:inline-block">
-          ស្នើសុំសម្រង់តម្លៃ
+          តម្លៃនៃសេវាកម្ម
         </a>
 
         <div class="relative hidden md:block" x-data="{ open: false }" @click.outside="open = false"
