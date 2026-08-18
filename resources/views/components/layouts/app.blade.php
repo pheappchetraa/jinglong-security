@@ -13,6 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://translate.google.com" />
+  <link rel="preconnect" href="https://translate.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet" />
   <title>{{ $title ?? 'JingLong Security' }}</title>

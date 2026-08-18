@@ -1,7 +1,7 @@
 import { initTheme, getStoredTheme, setStoredTheme } from './modules/theme.js'
 import { initNav } from './modules/nav.js'
 import { initMobileMenu } from './modules/menu.js'
-import { initLangToggle, restorePersistedLanguage } from './modules/lang.js'
+import { initLangToggle, restorePersistedLanguage, preloadTranslateWidget } from './modules/lang.js'
 import { initHeroSlider } from './modules/heroSlider.js'
 import { initFooter } from './modules/footer.js'
 
@@ -33,5 +33,13 @@ function mountApp() {
 
 mountApp()
 
+// Warm the Google Translate widget once the page has settled rather than
+// waiting for the first tap on the language switcher — on mobile the
+// script download + widget init is the actual source of switch lag, so
+// moving it off the tap's critical path is what fixes it. loadTranslateWidget
+// memoizes, so this is a no-op once restorePersistedLanguage() (or a real
+// switch) has already kicked it off.
+const warmOnIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 300))
+warmOnIdle(() => preloadTranslateWidget())
 
 document.addEventListener('livewire:navigated', mountApp)

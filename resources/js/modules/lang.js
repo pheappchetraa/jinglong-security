@@ -30,16 +30,24 @@ function loadTranslateWidget() {
         return
       }
 
-      const waitForSelect = () => {
-        const select = document.querySelector('.goog-te-combo')
-        if (select) {
-          clearTimeout(timer)
-          resolve(select)
-        } else {
-          setTimeout(waitForSelect, 100)
-        }
+      // MutationObserver reacts the instant Google's script inserts the
+      // <select>, instead of a fixed-interval poll racking up forced
+      // style/layout recalcs on slower mobile CPUs while it waits.
+      const existing = container.querySelector('.goog-te-combo')
+      if (existing) {
+        clearTimeout(timer)
+        resolve(existing)
+      } else {
+        const observer = new MutationObserver(() => {
+          const select = container.querySelector('.goog-te-combo')
+          if (select) {
+            observer.disconnect()
+            clearTimeout(timer)
+            resolve(select)
+          }
+        })
+        observer.observe(container, { childList: true, subtree: true })
       }
-      waitForSelect()
     }
 
     const script = document.createElement('script')
@@ -59,12 +67,25 @@ function loadTranslateWidget() {
   return widgetReady
 }
 
-function updateUI() {
+// Kicks off the script download + widget init ahead of any tap, so the
+// actual switch later just flips the already-ready <select> instead of
+// paying for network + init latency in the critical path. Safe to call
+// repeatedly (loadTranslateWidget memoizes) and safe to ignore failures —
+// a real switch attempt will retry and surface the error there.
+export function preloadTranslateWidget() {
+  loadTranslateWidget().catch(() => {})
+}
+
+// `overrideState`, when passed, paints ahead of the real `isEnglish` flag —
+// used for the optimistic tap response below, so the label flips before the
+// network/widget round trip finishes instead of after.
+function updateUI(overrideState) {
+  const state = overrideState ?? isEnglish
   document.querySelectorAll('[data-lang-label]').forEach((label) => {
-    label.textContent = isEnglish ? 'EN' : 'ខ្មែរ'
+    label.textContent = state ? 'EN' : 'ខ្មែរ'
   })
-  document.querySelectorAll('[data-lang-check-en]').forEach((check) => check.classList.toggle('hidden', !isEnglish))
-  document.querySelectorAll('[data-lang-check-km]').forEach((check) => check.classList.toggle('hidden', isEnglish))
+  document.querySelectorAll('[data-lang-check-en]').forEach((check) => check.classList.toggle('hidden', !state))
+  document.querySelectorAll('[data-lang-check-km]').forEach((check) => check.classList.toggle('hidden', state))
 }
 
 // Shared by the dropdown click handler and the post-navigation auto-restore
@@ -159,6 +180,13 @@ export function initLangToggle() {
       setMenuOpen(wrapper, !isOpen)
     })
 
+    // `pointerdown` fires ~100-300ms before `click` on touch devices. On a
+    // cold widget that head start is spent on script download/init instead
+    // of sitting in the tap's critical path (preloadTranslateWidget below
+    // usually beats this via idle time, but this is the safety net for a
+    // tap that lands before idle time ever ran).
+    button.addEventListener('pointerdown', () => preloadTranslateWidget(), { passive: true })
+
     wrapper.querySelectorAll('[data-lang-option]').forEach((option) => {
       option.addEventListener('click', async () => {
         const wantsEnglish = option.getAttribute('data-lang-option') === 'en'
@@ -171,6 +199,10 @@ export function initLangToggle() {
           return
         }
 
+        // Paint the switched state immediately so the tap feels instant;
+        // activateEnglish() below reconciles this to the real state once
+        // the (likely already-warm) widget actually confirms the switch.
+        updateUI(true)
         button.disabled = true
         try {
           await activateEnglish()
