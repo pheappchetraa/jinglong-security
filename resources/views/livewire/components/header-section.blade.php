@@ -1,4 +1,5 @@
-  <div>
+
+  <div class="contents">
     <div class="bg-green-950 text-gray-200 transition-colors dark:bg-black">
       <div class="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-1.5 text-center text-xs sm:justify-between sm:px-6 lg:px-8">
         <a href="tel:+855123456780" class="flex items-center gap-1.5 font-medium transition-colors hover:text-amber-400 hover:underline">

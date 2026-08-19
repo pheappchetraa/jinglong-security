@@ -36,3 +36,8 @@ html {
 body {
   top: 0 !important;
 }
+
+
+[x-persist="header"] {
+  display: contents;
+}

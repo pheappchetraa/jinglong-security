@@ -72,7 +72,7 @@
         <div class="flex flex-col items-center gap-1.5">
           <img src="/images/romdoullogo.png" alt="Romdoul" loading="lazy" class="h-6 w-6 object-contain" />
           <span class="text-[10px] font-semibold uppercase tracking-widest text-pink-900 dark:text-pink-900">Digital Design By</span>
-          <span class="text-sm font-bold text-pink-900 dark:text-white">រំដួល</span>
+          <span class="text-sm font-bold text-pink-900 dark:text-pink-900">រំដួល</span>
           <span class="text-xs font-semibold uppercase tracking-wide text-pink-900 dark:text-pink-900">Roumdoul</span>
         </div>
 
@@ -102,7 +102,7 @@
           </a>
 
           <a data-social="telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
-            class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-pink-900 transition-colors hover:bg-pink-900 hover:text-pink-900 dark:bg-gray-800 dark:text-white dark:hover:bg-pink-900 dark:hover:text-white">
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-pink-900 transition-colors hover:bg-pink-900 hover:text-pink-900 dark:bg-gray-800 dark:text-pink-900 dark:hover:bg-pink-900 dark:hover:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
               <path
                 d="M21.05 2.927a1.5 1.5 0 00-1.523-.245L2.98 9.36a1.31 1.31 0 00.088 2.457l4.377 1.462 1.68 5.393a1 1 0 001.697.372l2.457-2.457 4.522 3.34a1.5 1.5 0 002.37-.94l2.334-14.09a1.5 1.5 0 00-.452-1.61zM9.66 13.996l-.33 3.386-1.36-4.36 9.09-6.99c.19-.146.44.08.28.25l-7.4 7.4a.87.87 0 00-.28.314z" />
