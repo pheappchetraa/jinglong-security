@@ -4,6 +4,8 @@ export function initHeroSlider() {
   if (intervalId) clearInterval(intervalId)
 
   const section = document.getElementById('hero-slider')
+  if (!section) return
+
   const slides = section.querySelectorAll('.hero-slide')
   const dotsContainer = document.getElementById('hero-dots')
   const prevButton = document.getElementById('hero-prev')

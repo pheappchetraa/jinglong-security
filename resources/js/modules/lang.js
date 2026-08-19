@@ -113,11 +113,28 @@ function interceptNavigationWhileTranslated(e) {
   window.location.href = destination.href
 }
 
+// Google Translate persists the active language in a `googtrans` cookie,
+// independent of our own localStorage flag. Since the widget now gets
+// warmed proactively (see preloadTranslateWidget/app.js) instead of only on
+// a real click, simply leaving isEnglish/localStorage behind on "back to
+// Khmer" isn't enough — the next page's warm-up would re-init the widget,
+// see the stale cookie, and silently re-translate straight back to English.
+// Clearing every domain variant Google might have set it under (host-only,
+// and a leading-dot version for the apex/subdomain case) neutralizes that.
+function clearGoogleTranslateCookie() {
+  const expired = 'expires=Thu, 01 Jan 1970 00:00:00 UTC'
+  const host = window.location.hostname
+  document.cookie = `googtrans=; ${expired}; path=/`
+  document.cookie = `googtrans=; ${expired}; path=/; domain=${host}`
+  document.cookie = `googtrans=; ${expired}; path=/; domain=.${host}`
+}
+
 // A full reload guarantees Livewire's component registry, the DOM, and
 // Google's translate state all come back in sync — far safer than trying to
 // manually splice the original markup back into a Livewire-managed root.
 function restoreOriginal() {
   localStorage.setItem(LANG_STORAGE_KEY, 'km')
+  clearGoogleTranslateCookie()
   window.location.reload()
 }
 
