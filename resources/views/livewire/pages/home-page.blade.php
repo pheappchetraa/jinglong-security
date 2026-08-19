@@ -1,5 +1,6 @@
 <div>
     <livewire:sections.hero-section />
+    <livewire:sections.divisions-section />
     <livewire:sections.why-us-section />
     <livewire:sections.services-section />
 
@@ -18,5 +19,4 @@
     </section>
 
     <livewire:sections.news-section />
-    <livewire:sections.divisions-section />
 </div>

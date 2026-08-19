@@ -23,7 +23,7 @@
                 ព្រមទាំងត្រួតពិនិត្យអភិបាលកិច្ចប្រតិបត្តិការទាំងមូលរបស់ក្រុមហ៊ុន។
               </p>
             </div>
-            <div class="bg-gray-800 py-2 text-xs font-semibold uppercase tracking-wider text-white dark:bg-gray-950">
+            <div class="bg-green-800 py-2 text-xs font-bold uppercase tracking-wider text-amber-400">
               អង្គភាពទី ០១
             </div>
           </div>
@@ -43,7 +43,7 @@
                 ទៅតាមតម្រូវការជាក់លាក់របស់អតិថិជននីមួយៗ។
               </p>
             </div>
-            <div class="bg-gray-800 py-2 text-xs font-semibold uppercase tracking-wider text-white dark:bg-gray-950">
+            <div class="bg-green-800 py-2 text-xs font-bold uppercase tracking-wider text-amber-400">
               អង្គភាពទី ០២
             </div>
           </div>
@@ -63,7 +63,7 @@
                 និងការវាយតម្លៃសមត្ថភាពការងារ។
               </p>
             </div>
-            <div class="bg-gray-800 py-2 text-xs font-semibold uppercase tracking-wider text-white dark:bg-gray-950">
+            <div class="bg-green-800 py-2 text-xs font-bold uppercase tracking-wider text-amber-400">
               អង្គភាពទី ០៣
             </div>
           </div>
@@ -83,7 +83,7 @@
                 និងការគ្រប់គ្រងហ្វូងមនុស្សសម្រាប់ព្រឹត្តិការណ៍។
               </p>
             </div>
-            <div class="bg-gray-800 py-2 text-xs font-semibold uppercase tracking-wider text-white dark:bg-gray-950">
+            <div class="bg-green-800 py-2 text-xs font-bold uppercase tracking-wider text-amber-400">
               អង្គភាពទី ០៤
             </div>
           </div>

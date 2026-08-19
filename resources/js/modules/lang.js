@@ -19,7 +19,6 @@ function loadTranslateWidget() {
 
     window.initGoogleTranslate = () => {
       try {
-        // eslint-disable-next-line no-undef
         new google.translate.TranslateElement(
           { pageLanguage: 'km', includedLanguages: TARGET_LANGUAGE, autoDisplay: false },
           'google_translate_element',
@@ -30,9 +29,6 @@ function loadTranslateWidget() {
         return
       }
 
-      // MutationObserver reacts the instant Google's script inserts the
-      // <select>, instead of a fixed-interval poll racking up forced
-      // style/layout recalcs on slower mobile CPUs while it waits.
       const existing = container.querySelector('.goog-te-combo')
       if (existing) {
         clearTimeout(timer)
@@ -60,25 +56,16 @@ function loadTranslateWidget() {
   })
 
   widgetReady.catch(() => {
-    // Let the next attempt retry from scratch instead of replaying a dead promise.
     widgetReady = null
   })
 
   return widgetReady
 }
 
-// Kicks off the script download + widget init ahead of any tap, so the
-// actual switch later just flips the already-ready <select> instead of
-// paying for network + init latency in the critical path. Safe to call
-// repeatedly (loadTranslateWidget memoizes) and safe to ignore failures —
-// a real switch attempt will retry and surface the error there.
 export function preloadTranslateWidget() {
   loadTranslateWidget().catch(() => {})
 }
 
-// `overrideState`, when passed, paints ahead of the real `isEnglish` flag —
-// used for the optimistic tap response below, so the label flips before the
-// network/widget round trip finishes instead of after.
 function updateUI(overrideState) {
   const state = overrideState ?? isEnglish
   document.querySelectorAll('[data-lang-label]').forEach((label) => {
@@ -88,9 +75,6 @@ function updateUI(overrideState) {
   document.querySelectorAll('[data-lang-check-km]').forEach((check) => check.classList.toggle('hidden', state))
 }
 
-// Shared by the dropdown click handler and the post-navigation auto-restore
-// path below, so a stored English preference is re-applied the exact same
-// way a manual click would apply it.
 async function activateEnglish() {
   const select = await loadTranslateWidget()
   select.value = TARGET_LANGUAGE
@@ -99,12 +83,6 @@ async function activateEnglish() {
   updateUI()
 }
 
-// Google Translate rewrites text nodes in place, which conflicts with
-// Livewire's morph-based navigation (it walks the DOM expecting the shape it
-// last rendered). Rather than fight that, we force a real full-page
-// navigation while translated — Livewire boots fresh on the next page and
-// the desync/crash never has a chance to happen. localStorage is what makes
-// the choice survive that reload (see restorePersistedLanguage below).
 function interceptNavigationWhileTranslated(e) {
   if (!isEnglish) return
   const destination = e.detail && e.detail.url
@@ -113,19 +91,6 @@ function interceptNavigationWhileTranslated(e) {
   window.location.href = destination.href
 }
 
-// Google Translate persists the active language in a `googtrans` cookie,
-// independent of our own localStorage flag. Since the widget now gets
-// warmed proactively (see preloadTranslateWidget/app.js) instead of only on
-// a real click, simply leaving isEnglish/localStorage behind on "back to
-// Khmer" isn't enough — the next page's warm-up would re-init the widget,
-// see the stale cookie, and silently re-translate straight back to English.
-//
-// A browser only honors a cookie clear when its `domain` attribute exactly
-// matches the one the cookie was set with. On a bare host like `localhost`
-// that's just the host itself, but on a real subdomain (e.g.
-// jinglong.roumdoul.com) Google scopes the cookie to the registrable apex
-// (.roumdoul.com), not the full subdomain — so walk every ancestor suffix
-// of the hostname rather than assuming which level it picked.
 function clearGoogleTranslateCookie() {
   const expired = 'expires=Thu, 01 Jan 1970 00:00:00 UTC'
   document.cookie = `googtrans=; ${expired}; path=/`
@@ -138,21 +103,12 @@ function clearGoogleTranslateCookie() {
   }
 }
 
-// A full reload guarantees Livewire's component registry, the DOM, and
-// Google's translate state all come back in sync — far safer than trying to
-// manually splice the original markup back into a Livewire-managed root.
 function restoreOriginal() {
   localStorage.setItem(LANG_STORAGE_KEY, 'km')
   clearGoogleTranslateCookie()
   window.location.reload()
 }
 
-// Runs on every real page load (including the reload triggered above) so an
-// English preference survives navigation even though the DOM itself can't be
-// carried across a full reload. Safe to call on every livewire:navigated too
-// — it's a no-op once already translated, and translated pages never reach
-// livewire:navigated anyway since interceptNavigationWhileTranslated forces
-// a hard reload before Livewire's SPA swap can run.
 export function restorePersistedLanguage() {
   if (isEnglish) return
   if (localStorage.getItem(LANG_STORAGE_KEY) !== 'en') return
@@ -175,8 +131,6 @@ function setMenuOpen(wrapper, isOpen) {
   button.setAttribute('aria-expanded', String(isOpen))
 }
 
-// Queries the live DOM rather than a captured NodeList so this keeps working
-// even after Google Translate rewrites surrounding markup.
 function closeAllLangDropdowns() {
   document.querySelectorAll('[data-lang-dropdown]').forEach((wrapper) => setMenuOpen(wrapper, false))
 }
@@ -185,10 +139,6 @@ export function initLangToggle() {
   const wrappers = document.querySelectorAll('[data-lang-dropdown]')
   if (wrappers.length === 0) return
 
-  // Header is persisted across wire:navigate, so its dropdown is already
-  // wired up from the initial mount — re-running here would create a fresh
-  // closure and stomp the real (persisted) state when updateUI() runs below.
-  // Skip entirely once bound.
   const unboundWrappers = Array.from(wrappers).filter(
     (wrapper) => !wrapper.querySelector('[data-lang-toggle]').dataset.langBound,
   )
@@ -206,11 +156,6 @@ export function initLangToggle() {
       setMenuOpen(wrapper, !isOpen)
     })
 
-    // `pointerdown` fires ~100-300ms before `click` on touch devices. On a
-    // cold widget that head start is spent on script download/init instead
-    // of sitting in the tap's critical path (preloadTranslateWidget below
-    // usually beats this via idle time, but this is the safety net for a
-    // tap that lands before idle time ever ran).
     button.addEventListener('pointerdown', () => preloadTranslateWidget(), { passive: true })
 
     wrapper.querySelectorAll('[data-lang-option]').forEach((option) => {
@@ -225,9 +170,6 @@ export function initLangToggle() {
           return
         }
 
-        // Paint the switched state immediately so the tap feels instant;
-        // activateEnglish() below reconciles this to the real state once
-        // the (likely already-warm) widget actually confirms the switch.
         updateUI(true)
         button.disabled = true
         try {

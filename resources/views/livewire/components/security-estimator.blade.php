@@ -54,7 +54,7 @@
                     ថយក្រោយ
                 </button>
                 <button type="button" wire:click="goToCoverageStep" @disabled(empty($services))
-                    class="rounded-md bg-amber-400 px-4 py-2 text-sm font-semibold text-green-950 transition-colors hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-50">
+                    class="rounded-md bg-green-800 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-50">
                     បន្ទាប់
                 </button>
             </div>
@@ -93,7 +93,7 @@
                     ថយក្រោយ
                 </button>
                 <button type="button" wire:click="getRecommendation" @disabled(! $coverageHours)
-                    class="rounded-md bg-amber-400 px-4 py-2 text-sm font-semibold text-green-950 transition-colors hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-50">
+                    class="rounded-md bg-green-800 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-50">
                     ទទួលបានការណែនាំ
                 </button>
             </div>

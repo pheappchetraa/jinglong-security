@@ -5,12 +5,6 @@ import { initLangToggle, restorePersistedLanguage, preloadTranslateWidget } from
 import { initHeroSlider } from './modules/heroSlider.js'
 import { initFooter } from './modules/footer.js'
 
-// Registered once, before Alpine processes any x-data on the page — the
-// header's desktop and mobile theme dropdowns are two separate x-data
-// scopes, so a shared store (rather than each reading localStorage
-// independently) is what keeps them showing the same active mode. The store
-// itself survives every wire:navigate for free: Alpine never reboots across
-// SPA transitions, only specific DOM elements outside @persist do.
 document.addEventListener('alpine:init', () => {
   window.Alpine.store('theme', {
     current: getStoredTheme(),
@@ -21,6 +15,21 @@ document.addEventListener('alpine:init', () => {
   })
 })
 
+function scrollToHash() {
+  const hash = window.location.hash
+  if (!hash) return
+  // Deferred: something Livewire runs immediately after dispatching
+  // livewire:navigated (Alpine re-init / autofocus / further layout work)
+  // cancels an in-flight smooth-scroll animation started synchronously
+  // inside this same event tick — waiting for the next one lets that
+  // settle first.
+  setTimeout(() => {
+    const target = document.querySelector(hash)
+    if (!target) return
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, 0)
+}
+
 function mountApp() {
   initTheme()
   initNav()
@@ -29,16 +38,11 @@ function mountApp() {
   restorePersistedLanguage()
   initHeroSlider()
   initFooter()
+  scrollToHash()
 }
 
 mountApp()
 
-// Warm the Google Translate widget once the page has settled rather than
-// waiting for the first tap on the language switcher — on mobile the
-// script download + widget init is the actual source of switch lag, so
-// moving it off the tap's critical path is what fixes it. loadTranslateWidget
-// memoizes, so this is a no-op once restorePersistedLanguage() (or a real
-// switch) has already kicked it off.
 const warmOnIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 300))
 warmOnIdle(() => preloadTranslateWidget())
 

@@ -68,7 +68,7 @@
             </div>
 
             <button type="submit" wire:loading.attr="disabled" wire:target="submit"
-                class="w-full rounded-md bg-amber-400 px-6 py-3 text-sm font-semibold text-green-950 transition-colors hover:bg-amber-300 disabled:opacity-60">
+                class="w-full rounded-md bg-green-800 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-700 disabled:opacity-60">
                 <span wire:loading.remove wire:target="submit">ផ្ញើសារ</span>
                 <span wire:loading wire:target="submit">កំពុងផ្ញើ...</span>
             </button>
