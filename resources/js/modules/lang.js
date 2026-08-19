@@ -119,14 +119,23 @@ function interceptNavigationWhileTranslated(e) {
 // a real click, simply leaving isEnglish/localStorage behind on "back to
 // Khmer" isn't enough — the next page's warm-up would re-init the widget,
 // see the stale cookie, and silently re-translate straight back to English.
-// Clearing every domain variant Google might have set it under (host-only,
-// and a leading-dot version for the apex/subdomain case) neutralizes that.
+//
+// A browser only honors a cookie clear when its `domain` attribute exactly
+// matches the one the cookie was set with. On a bare host like `localhost`
+// that's just the host itself, but on a real subdomain (e.g.
+// jinglong.roumdoul.com) Google scopes the cookie to the registrable apex
+// (.roumdoul.com), not the full subdomain — so walk every ancestor suffix
+// of the hostname rather than assuming which level it picked.
 function clearGoogleTranslateCookie() {
   const expired = 'expires=Thu, 01 Jan 1970 00:00:00 UTC'
-  const host = window.location.hostname
   document.cookie = `googtrans=; ${expired}; path=/`
-  document.cookie = `googtrans=; ${expired}; path=/; domain=${host}`
-  document.cookie = `googtrans=; ${expired}; path=/; domain=.${host}`
+
+  const labels = window.location.hostname.split('.')
+  for (let i = 0; i < labels.length; i++) {
+    const domain = labels.slice(i).join('.')
+    document.cookie = `googtrans=; ${expired}; path=/; domain=${domain}`
+    document.cookie = `googtrans=; ${expired}; path=/; domain=.${domain}`
+  }
 }
 
 // A full reload guarantees Livewire's component registry, the DOM, and
