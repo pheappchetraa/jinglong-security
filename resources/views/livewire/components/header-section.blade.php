@@ -18,7 +18,7 @@
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
       <a href="/" wire:navigate class="flex items-center gap-2">
         <img src="/images/SJL Logo-01.png" alt="JingLong Security" class="h-9 w-9 object-contain sm:h-10 sm:w-10" />
-        <span class="text-lg font-bold uppercase text-green-800 dark:text-white sm:text-xl">JingLong Security</span>
+        <span class="text-lg font-bold uppercase text-green-800 dark:text-white sm:text-xl">JINGLONG SECURITY CO.,LTD</span>
       </a>
 
       <nav class="hidden items-center gap-6 md:flex">
