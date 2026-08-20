@@ -1,13 +1,15 @@
     <section id="hero-slider" class="relative h-100 w-full overflow-hidden sm:h-125 md:h-150">
-      <div
-        class="hero-slide absolute inset-0 bg-linear-to-br from-green-950 via-green-900 to-green-800 opacity-100 transition-opacity duration-700 ease-in-out">
+      <div class="hero-slide absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 transition-opacity duration-700 ease-in-out"
+        style="background-image: url('{{ asset('images/hero-images/hero1.jpg') }}')">
       </div>
-      <div
-        class="hero-slide absolute inset-0 bg-linear-to-br from-gray-900 via-gray-800 to-green-950 opacity-0 transition-opacity duration-700 ease-in-out">
+      <div class="hero-slide absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-700 ease-in-out"
+        style="background-image: url('{{ asset('images/hero-images/hero2.jpg') }}')">
       </div>
-      <div
-        class="hero-slide absolute inset-0 bg-linear-to-br from-green-900 via-slate-900 to-gray-900 opacity-0 transition-opacity duration-700 ease-in-out">
+      <div class="hero-slide absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-700 ease-in-out"
+        style="background-image: url('{{ asset('images/hero-images/hero3.jpg') }}')">
       </div>
+
+      <div class="pointer-events-none absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-black/30"></div>
 
       <div class="pointer-events-none relative z-10 flex h-full w-full flex-col items-center justify-center gap-5 px-4 text-center sm:gap-6 sm:px-6 lg:px-8">
         <h1 class="max-w-3xl text-2xl font-bold leading-tight text-white drop-shadow-sm sm:text-3xl md:text-4xl lg:text-5xl">

@@ -11,6 +11,8 @@ export function initHeroSlider() {
   const prevButton = document.getElementById('hero-prev')
   const nextButton = document.getElementById('hero-next')
 
+  dotsContainer.innerHTML = ''
+
   let currentIndex = 0
 
   const dots = Array.from(slides).map((_, index) => {
@@ -50,7 +52,7 @@ export function initHeroSlider() {
   }
 
   function startAutoplay() {
-    intervalId = setInterval(goToNext, 4000)
+    intervalId = setInterval(goToNext, 5000)
   }
 
   prevButton.addEventListener('click', goToPrev)

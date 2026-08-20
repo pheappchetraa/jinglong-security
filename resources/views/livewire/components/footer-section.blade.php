@@ -66,11 +66,11 @@
       </div>
 
       <div class="mt-12 flex flex-col items-center gap-8 border-t border-gray-200 pt-8 text-center dark:border-gray-800">
-        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; <span id="footer-year"></span> JingLong Security. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400">&copy; <span id="footer-year"></span> JINGLONG SECURITY CO.,LTD រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
 
         <div class="flex flex-col items-center gap-6 border-t border-gray-200 pt-8 dark:border-gray-800">
         <div class="flex flex-col items-center gap-1.5">
-          <img src="/images/romdoullogo.png" alt="Romdoul" loading="lazy" class="h-6 w-6 object-contain" />
+          <img src="/images/Roumdoul_Logo.png" alt="Romdoul" loading="lazy" class="h-6 w-6 object-contain" />
           <span class="text-[10px] font-semibold uppercase tracking-widest text-pink-900 dark:text-pink-900">Digital Design By</span>
           <span class="text-sm font-bold text-pink-900 dark:text-pink-900">រំដួល</span>
           <span class="text-xs font-semibold uppercase tracking-wide text-pink-900 dark:text-pink-900">Roumdoul</span>
